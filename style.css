@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fffafc;
+  color: #333;
+}
+
+header {
+  background: #ffccd5;
+  text-align: center;
+  padding: 25px;
+}
+
+main {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  color: #ff4d6d;
+}
+
+.post-card {
+  background: white;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+a {
+  color: #ff4d6d;
+  text-decoration: none;
+  font-weight: bold;
+}
