@@ -33,6 +33,12 @@ h2 {
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
+.featured-img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
 a {
   color: #ff4d6d;
   text-decoration: none;
