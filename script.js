@@ -42,6 +42,51 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// FIREBASE CONFIG
+const firebaseConfig = {
+  apiKey: "YOUR_KEY",
+  authDomain: "YOUR_DOMAIN",
+  projectId: "YOUR_ID",
+  storageBucket: "YOUR_BUCKET",
+  messagingSenderId: "YOUR_MSG",
+  appId: "YOUR_APP_ID"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
+
+const feed = document.getElementById("feed");
+
+db.collection("posts")
+  .orderBy("createdAt", "desc")
+  .get()
+  .then((snapshot) => {
+    snapshot.forEach((doc) => {
+      const post = doc.data();
+
+      const postEl = document.createElement("div");
+      postEl.classList.add("post");
+
+      postEl.innerHTML = `
+        <img src="${post.image}" class="post-img">
+
+        <div class="post-content">
+          <h3>${post.title}</h3>
+
+          <div class="actions">
+            <span class="like-btn">❤️</span>
+            <span class="share-btn">📤</span>
+          </div>
+
+          <p>${post.content}</p>
+        </div>
+      `;
+
+      feed.appendChild(postEl);
+    });
+  });
+
 // SHARE
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("share-btn")) {
