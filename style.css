@@ -58,3 +58,20 @@ body {
 .liked {
   color: red;
 }
+
+.admin-box {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  margin-top: 40px;
+}
+
+.admin-box input,
+.admin-box textarea,
+.admin-box select {
+  width: 100%;
+  padding: 10px;
+}
+
