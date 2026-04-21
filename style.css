@@ -1,11 +1,113 @@
+/* ===== RESET + BASE ===== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #fffafc;
+  background: #fafafa; /* more Instagram-like */
   color: #333;
   line-height: 1.6;
 }
 
+/* ===== NAVBAR (Instagram style) ===== */
+.navbar {
+  background: #fff;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* ===== MAIN FEED ===== */
+.feed {
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* ===== POST CARD (Instagram style) ===== */
+.post {
+  background: white;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.post:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ===== IMAGE ===== */
+.post-img {
+  width: 100%;
+  display: block;
+}
+
+/* ===== CONTENT ===== */
+.post-content {
+  padding: 12px;
+}
+
+.post-content h3 {
+  margin: 5px 0;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.actions {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.actions span {
+  transition: 0.2s;
+}
+
+.actions span:hover {
+  transform: scale(1.2);
+}
+
+/* ===== LIKE ACTIVE STATE (for later JS) ===== */
+.liked {
+  color: red;
+}
+
+/* ===== SAVE ACTIVE STATE ===== */
+.saved {
+  color: #ff4d6d;
+}
+
+/* ===== TEXT ===== */
+.post-content p {
+  margin: 5px 0 10px;
+}
+
+/* ===== BUTTON STYLE (for future affiliate links) ===== */
+.button {
+  display: inline-block;
+  background: #ff4d6d;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.button:hover {
+  background: #e8435c;
+}
+
+/* ===== OLD BLOG SUPPORT (KEEPING YOUR EXISTING DESIGN SAFE) ===== */
 header {
   background: #ffccd5;
   text-align: center;
@@ -36,16 +138,53 @@ h3 {
   margin: 20px 0;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
 }
 
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== FEATURED IMAGE ===== */
 .featured-img {
   width: 100%;
   border-radius: 10px;
   margin: 15px 0;
 }
 
+/* ===== LINKS ===== */
 a {
   color: #ff4d6d;
   text-decoration: none;
   font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== EMAIL POPUP (for later lead capture) ===== */
+.popup {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+}
+
+.popup input {
+  padding: 8px;
+  margin: 5px;
+  width: 150px;
+}
+
+.popup button {
+  padding: 8px 12px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
